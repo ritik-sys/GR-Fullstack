@@ -15,7 +15,8 @@ import Uploads from './components/Pages/Uploads'
 import Recent from './components/Pages/Recent'
 import Solutions from './components/Pages/Solutions'
 import ForgotPassword from './components/auth/ForgotPassword'
-
+import App1 from './components/landing/src/App'
+// import './components/landing/src/assets/scss/style.scss'
 const App = () => {
   return (
     <AuthState>
@@ -23,6 +24,7 @@ const App = () => {
         <Router>
           <Fragment>
             <Switch>
+              <Route exact path='/' component={App1} />
               <Route exact path='/forgotPassword' component={ForgotPassword} />
               <Route exact path="/User" component={User} />
               <Route exact path="/User/upload" component={Uploads} />
